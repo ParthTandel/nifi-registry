@@ -813,6 +813,85 @@
       "autoTerminatedRelationships" : [ ],
       "bulletinLevel" : "WARN",
       "bundle" : {
+        "artifact" : "pp-custom-processors-nar",
+        "group" : "pp",
+        "version" : "1.0-SNAPSHOT"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "68f2c818-6b4e-3abc-abab-99cde1e00162",
+      "identifier" : "8419d91f-64f3-372a-885a-85056bffaa14",
+      "name" : "MonitorInputActivity",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 1040.7021996891297,
+        "y" : -553.003429232358
+      },
+      "properties" : {
+        "Continually Send Messages" : "false",
+        "Inactivity Message" : "Lacking activity as of time: ${now():format('yyyy/MM/dd HH:mm:ss')}; flow has been inactive for ${inactivityDurationMillis:toNumber():divide(60000)} minutes",
+        "Activity Restored Message" : "Activity restored at time: ${now():format('yyyy/MM/dd HH:mm:ss')} after being inactive for ${inactivityDurationMillis:toNumber():divide(60000)} minutes",
+        "Copy Attributes" : "false",
+        "Monitoring Scope" : "node",
+        "Threshold Duration" : "5 min",
+        "Reporting Node" : "all"
+      },
+      "propertyDescriptors" : {
+        "Continually Send Messages" : {
+          "displayName" : "Continually Send Messages",
+          "identifiesControllerService" : false,
+          "name" : "Continually Send Messages",
+          "sensitive" : false
+        },
+        "Inactivity Message" : {
+          "displayName" : "Inactivity Message",
+          "identifiesControllerService" : false,
+          "name" : "Inactivity Message",
+          "sensitive" : false
+        },
+        "Activity Restored Message" : {
+          "displayName" : "Activity Restored Message",
+          "identifiesControllerService" : false,
+          "name" : "Activity Restored Message",
+          "sensitive" : false
+        },
+        "Copy Attributes" : {
+          "displayName" : "Copy Attributes",
+          "identifiesControllerService" : false,
+          "name" : "Copy Attributes",
+          "sensitive" : false
+        },
+        "Monitoring Scope" : {
+          "displayName" : "Monitoring Scope",
+          "identifiesControllerService" : false,
+          "name" : "Monitoring Scope",
+          "sensitive" : false
+        },
+        "Threshold Duration" : {
+          "displayName" : "Threshold Duration",
+          "identifiesControllerService" : false,
+          "name" : "Threshold Duration",
+          "sensitive" : false
+        },
+        "Reporting Node" : {
+          "displayName" : "Reporting Node",
+          "identifiesControllerService" : false,
+          "name" : "Reporting Node",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "com.placepass.nifi.processors.monitorinputactivity.MonitorInputActivity",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
         "artifact" : "nifi-standard-nar",
         "group" : "org.apache.nifi",
         "version" : "1.8.0"
@@ -1365,8 +1444,8 @@
       "name" : "DistributeLoad",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 1478.947308706913,
-        "y" : -42.96385806978196
+        "x" : 1406.153607535038,
+        "y" : -162.77030509889573
       },
       "properties" : {
         "Number of Relationships" : "1",
